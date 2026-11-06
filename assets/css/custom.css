@@ -1,0 +1,234 @@
+/* ========================================================
+   2. ŠRIFTŲ (TYPOGRAPHY) STILIAI
+   ======================================================== */
+
+/* 2a. Pakeista svetainės šriftų šeima */
+/* Importuojame naujus šriftus iš Google Fonts (tinka inžinerinei tematikai) */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* 2b, 2d. Pakeisti antraščių (h1-h6) stiliai (dydžiai, storiai, spalvos, vizualus skirtumas) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fira Code', monospace; /* Programuotojų stiliaus šriftas antraštėms */
+    color: #4CAF50; /* Žalia akcento spalva */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Pridėtas šešėlis ryškumui */
+}
+
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+
+/* 2c, 2d. Atnaujintas pastraipų stilius */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #dcdcdc; /* Šviesesnė pilka tekstui */
+    letter-spacing: 0.5px;
+}
+
+
+/* ========================================================
+   3. KOMPONENTŲ STILIAI (MYGTUKAI IR NUORODOS)
+   ======================================================== */
+
+/* 3b, 3c. Nuorodų stiliai */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    border-bottom: 1px dashed #4CAF50; /* Brūkšninė linija po nuoroda */
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #81C784;
+    border-bottom-style: solid;
+}
+
+/* 3a, 3c. Mygtukų ir jų pseudo-klasių (:hover, :active) stiliai */
+.btn, button, input[type="submit"] {
+    background-color: #2E7D32;
+    color: #ffffff;
+    border: 2px solid #4CAF50;
+    border-radius: 8px; /* Suapvalinti kampai */
+    padding: 10px 24px;
+    font-family: 'Fira Code', monospace;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover {
+    background-color: #4CAF50;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+    transform: translateY(-2px); /* Pakilimo efektas užvedus pelę */
+}
+
+.btn:active, button:active, input[type="submit"]:active {
+    transform: translateY(1px); /* Paspaudimo efektas */
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.4);
+}
+
+
+/* ========================================================
+   4. ELEMENTŲ IŠDĖSTYMAS IR TURINIO BLOKAI
+   ======================================================== */
+
+/* 4a. Margin ir Padding pakeitimai "Apie", "Patirtis", "Darbai" skiltyse */
+.about.section, .resume.section, .portfolio.section {
+    padding: 80px 25px; /* Didesni vidiniai tarpai */
+    margin-bottom: 40px; /* Papildomas išorinis tarpas tarp sekcijų */
+}
+
+/* 4b. Turinio blokų išvaizdos tobulinimas (rėmeliai, užapvalinimai, šešėliai) */
+.about .container, .resume .resume-item, .portfolio .portfolio-item {
+    background: rgba(30, 30, 30, 0.8);
+    border-left: 4px solid #4CAF50; /* Ryškus kairysis rėmelis */
+    border-radius: 12px; /* Užapvalinimai (Border Radius) */
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Šešėlis (Box Shadow) */
+    transition: transform 0.3s ease;
+}
+
+.resume .resume-item:hover, .portfolio .portfolio-item:hover {
+    transform: scale(1.02); /* Priartinimo efektas užvedus */
+}
+
+
+/* ========================================================
+   5. DVIEJŲ PASIRINKTŲ KOMPONENTŲ STILIŲ ATNAUJINIMAS
+   ======================================================== */
+
+/* Komponentas 1: Progreso juostos (Progress Bars) įgūdžių (Skills) skiltyje */
+.progress .progress-bar {
+    /* 1. Pakeistas fonas į spalvų perėjimą (gradientą) vietoje vientisos spalvos */
+    background: linear-gradient(90deg, #2E7D32 0%, #81C784 100%); 
+    
+    /* 2. Pridėtas užapvalinimas, kad juostos nebūtų stačiakampės */
+    border-radius: 10px; 
+    
+    /* 3. Pridėtas vidinis šešėlis (inset box-shadow) gylio efektui sukurti */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3) inset; 
+}
+
+/* Komponentas 2: Pagrindinė (viršutinė) navigacijos juostos sekcija (Header) */
+#header.header {
+    /* 1. Fono spalva (padaryta kiek tamsesnė, nes nuėmėme suliejimą) */
+    background-color: rgba(20, 20, 20, 0.98) !important; 
+    
+    /* 2. Apatinė kraštinė */
+    border-bottom: 3px solid #4CAF50; 
+    
+    /* 3. NAUJA: Išorinis šešėlis vietoj suliejimo (blur), kad nesugadintų burgerio meniu */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); 
+    
+    z-index: 9990 !important;
+}
+
+/* Užtikriname, kad mobiliosios versijos mygtukas ir išsiskleidžiantis sąrašas būtų absoliučiai viršuje */
+.mobile-nav-toggle, .navmenu ul {
+    z-index: 9999 !important;
+}
+
+
+/* ========================================================
+   PAPILDOMA UŽDUOTIS: SĄRAŠŲ IR LENTELĖS STILIŲ ATNAUJINIMAS
+   ======================================================== */
+
+/* --------------------------------------------------------
+   1. SĄRAŠŲ STILIŲ ATNAUJINIMAS
+   -------------------------------------------------------- */
+
+/* 1a. Nenumeruoto sąrašo išvaizda naudojant pseudo-elementus */
+.services ul {
+    list-style-type: none; /* Paslepiami standartiniai taškai */
+    padding-left: 0;
+}
+
+.services ul > li {
+    margin-bottom: 10px;
+}
+
+.services ul > li::before {
+    content: "➔"; /* Pridedamas pasirinktinis simbolis */
+    color: #4CAF50;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* 1a. Numeruoto sąrašo išvaizda naudojant CSS skaitiklius (Counters) */
+.services ol {
+    list-style-type: none; /* Paslepiami standartiniai skaičiai */
+    counter-reset: paslaugos-skaitiklis; /* Sukuriamas naujas skaitiklis */
+    padding-left: 0;
+}
+
+.services ol > li {
+    counter-increment: paslaugos-skaitiklis; /* Skaitiklis didinamas kiekvienam elementui */
+    margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.services ol > li::before {
+    content: counter(paslaugos-skaitiklis) ". "; /* Išvedamas skaitiklio skaičius */
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* 1b. Įdėtinio sąrašo (Nested List) stilius (vizualiai skiriasi nuo pagrindinio) */
+.services ul ul {
+    margin-left: 25px;
+    margin-top: 10px;
+    border-left: 2px dashed #4CAF50; /* Pridedama brūkšninė linija kairėje */
+    padding-left: 15px;
+    background: rgba(0, 0, 0, 0.15); /* Skirtingas fonas */
+    border-radius: 0 5px 5px 0;
+}
+
+.services ul ul > li::before {
+    content: "•"; /* Kitoks simbolis įdėtiniam sąrašui */
+    color: #81C784;
+}
+
+
+/* --------------------------------------------------------
+   2. LENTELĖS STILIAUS ATNAUJINIMAS
+   -------------------------------------------------------- */
+
+/* 2a. Antraštinės eilutės stilius (vizualiai išsiskiria iš duomenų laukų) */
+.table thead th {
+    background-color: #1b5e20 !important; /* Tamsiai žalias fonas */
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #81C784 !important; /* Ryški apatinė kraštinė */
+}
+
+/* 2b. „Zebra“ stilius (pakaitomis skirtingos eilučių spalvos) ir :hover efektas */
+.table tbody tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.03) !important; /* Kas antra eilutė šviesesnė */
+}
+
+.table tbody tr:nth-child(odd) td {
+    background-color: transparent !important;
+}
+
+.table tbody tr:hover td {
+    background-color: rgba(76, 175, 80, 0.2) !important; /* Užvedus pelę, eilutė tampa žalia */
+    cursor: default;
+    transition: background-color 0.3s ease;
+}
+
+/* 2c. Vienodi langelių vidiniai tarpai (Cell Padding) ir turinio lygiavimas centre */
+.table th, .table td {
+    padding: 16px !important; /* Vienodi vidiniai tarpai */
+    text-align: center !important; /* Lygiavimas centre horizontalei */
+    vertical-align: middle !important; /* Lygiavimas centre vertikaliai */
+}
