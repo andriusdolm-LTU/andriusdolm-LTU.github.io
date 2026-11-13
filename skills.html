@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Kompetencijos - Mano CV</title>
+  
+  <!-- Favicons -->
+  <link href="assets/img/laptop.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Mano CV</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Pagrindinis</a></li>
+          <li><a href="about.html">Apie</a></li>
+          <li><a href="resume.html">Patirtis</a></li>
+          <li><a href="services.html">Paslaugos</a></li>
+          <li><a href="portfolio.html">Darbai</a></li>
+          <li><a href="skills.html" class="active">Kompetencijos</a></li>
+          <li><a href="contact.html">Kontaktai</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    
+    <!-- Puslapio antraštė -->
+    <div class="page-title">
+      <div class="heading">
+        <div class="container text-center">
+          <h1>Kompetencijų pažanga</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kompetencijų modulis -->
+    <section id="skills-module" class="section dark-background">
+      <div class="container">
+        
+        <!-- Statistika ir lygio informacija (Grid/Flexbox išdėstymas) -->
+        <div class="row mb-5">
+          
+          <!-- Lygio ir patirties taškų blokas -->
+          <div class="col-md-6 mb-4">
+            <div class="stats-card">
+              <h3>Lygis ir Rangas</h3>
+              <div class="rank-info d-flex justify-content-between">
+                <span><strong>Lygis:</strong> 2</span>
+                <span><strong>Rangas:</strong> Praktikantas</span>
+              </div>
+              <p class="mt-2 mb-1"><strong>Uždirbta patirtis:</strong> 140 XP</p>
+              
+              <!-- Progreso juosta (Progress bar) -->
+              <div class="custom-progress-bar">
+                <!-- Užpildyta 93% (140 iš 150 XP) -->
+                <div class="custom-progress-fill" style="width: 93%;"></div> 
+              </div>
+              <div class="d-flex justify-content-between text-muted small mt-1">
+                <span>140 XP</span>
+                <span>Kitas lygis: 150 XP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bendros statistikos blokas -->
+          <div class="col-md-6 mb-4">
+            <div class="stats-card">
+              <h3>Pažangos statistika</h3>
+              <ul class="stats-list">
+                <li><strong>Bendras įgūdžių skaičius:</strong> 7</li>
+                <li><strong>Atliktų įgūdžių skaičius:</strong> 3</li>
+                <li><strong>Atliktų įgūdžių procentas:</strong> 43%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Įgūdžių Kanban lenta (Grid išdėstymas) -->
+        <div class="kanban-board">
+          
+          <!-- 1 Kategorija: Planuojama -->
+          <div class="kanban-column">
+            <h4 class="kanban-header planuojama">Planuojama</h4>
+            
+            <div class="kanban-card">
+              <h5 class="skill-title">JavaScript</h5>
+              <div class="skill-meta">
+                <span class="skill-status status-planuojama">Planuojama</span>
+                <span class="skill-xp">50 XP</span>
+              </div>
+            </div>
+
+            <div class="kanban-card">
+              <h5 class="skill-title">Altium Designer</h5>
+              <div class="skill-meta">
+                <span class="skill-status status-planuojama">Planuojama</span>
+                <span class="skill-xp">40 XP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 Kategorija: Mokomasi -->
+          <div class="kanban-column">
+            <h4 class="kanban-header mokomasi">Mokomasi</h4>
+            
+            <div class="kanban-card">
+              <h5 class="skill-title">KiCad PCB</h5>
+              <div class="skill-meta">
+                <span class="skill-status status-mokomasi">Mokomasi</span>
+                <span class="skill-xp">60 XP</span>
+              </div>
+            </div>
+
+            <div class="kanban-card">
+              <h5 class="skill-title">HTML, CSS</h5>
+              <div class="skill-meta">
+                <span class="skill-status status-mokomasi">Mokomasi</span>
+                <span class="skill-xp">40 XP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Kategorija: Atlikta -->
+          <div class="kanban-column">
+            <h4 class="kanban-header atlikta">Atlikta</h4>
+            
+            <div class="kanban-card">
+              <h5 class="skill-title">C (Bare-metal AVR)</h5>
+              <div class="skill-meta">
+                <span class="skill-status status-atlikta">Atlikta</span>
+                <span class="skill-xp">60 XP</span>
+              </div>
+            </div>
+
+            <div class="kanban-card">
+              <h5 class="skill-title">SolidWorks 3D</h5>
+              <div class="skill-meta">
+                <span class="skill-status status-atlikta">Atlikta</span>
+                <span class="skill-xp">50 XP</span>
+              </div>
+            </div>
+
+            <div class="kanban-card">
+              <h5 class="skill-title">Arduino projects</h5>
+              <div class="skill-meta">
+                <span class="skill-status status-atlikta">Atlikta</span>
+                <span class="skill-xp">30 XP</span>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- Pabaiga Kanban -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background text-center py-4">
+    <div class="container">
+      <p>Andrius Dolmantas CV puslapis</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
