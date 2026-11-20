@@ -482,3 +482,70 @@ a:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* ========================================================
+   11 LAB. DARBAS: KONTAKTŲ FORMOS STILIAI IR VALIDACIJA
+   ======================================================== */
+.custom-contact-form .form-label {
+  color: #dcdcdc;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.custom-contact-form .form-control {
+  background-color: rgba(25, 25, 25, 0.9);
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.custom-contact-form .form-control:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+  background-color: rgba(30, 30, 30, 0.95);
+  color: #fff;
+}
+
+.custom-contact-form .form-control.input-error {
+  border-color: #ef5350 !important;
+  box-shadow: 0 0 0 0.2rem rgba(239, 83, 80, 0.2) !important;
+}
+
+.custom-contact-form .form-control.input-valid {
+  border-color: #4CAF50;
+}
+
+.field-error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.custom-contact-form button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-clear {
+  background-color: #3a3a3a !important;
+  border-color: #777 !important;
+}
+
+.btn-clear:hover {
+  background-color: #555 !important;
+}
+
+.form-output-box {
+  display: none;
+  background: rgba(30, 30, 30, 0.9);
+  border-left: 4px solid #4CAF50;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.form-output-box.visible {
+  display: block;
+}

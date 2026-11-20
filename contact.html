@@ -87,90 +87,67 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="icon bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
+        <!-- NAUJA FORMA (įrašoma senojo <form class="php-email-form"> vietoje) -->
+        <form id="cv-contact-form" class="custom-contact-form mt-4" data-aos="fade-up" data-aos-delay="600" novalidate>
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">Vardas *</label>
+              <input type="text" id="firstName" name="firstName" class="form-control">
+              <div class="field-error" id="err-firstName"></div>
             </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="icon bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Me</h3>
-                <p>+1 5589 55488 55</p>
-              </div>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="icon bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>info@example.com</p>
-              </div>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
-              <i class="icon bi bi-share flex-shrink-0"></i>
-              <div>
-                <h3>Social Profiles</h3>
-                <div class="social-links">
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-skype"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-          <div class="row gy-4">
 
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <label for="lastName" class="form-label">Pavardė *</label>
+              <input type="text" id="lastName" name="lastName" class="form-control">
+              <div class="field-error" id="err-lastName"></div>
             </div>
 
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            <div class="col-md-6">
+              <label for="email" class="form-label">El. paštas *</label>
+              <input type="email" id="email" name="email" class="form-control">
+              <div class="field-error" id="err-email"></div>
             </div>
 
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Telefono numeris *</label>
+              <input type="text" id="phone" name="phone" class="form-control" placeholder="+370 6xx xxxxx">
+              <div class="field-error" id="err-phone"></div>
             </div>
 
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            <div class="col-12">
+              <label for="address" class="form-label">Adresas *</label>
+              <input type="text" id="address" name="address" class="form-control">
+              <div class="field-error" id="err-address"></div>
             </div>
 
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
+            <div class="col-md-4">
+              <label for="rating1" class="form-label">1. Techninių žinių įvertinimas (1–10) *</label>
+              <input type="number" id="rating1" name="rating1" class="form-control" min="1" max="10">
+              <div class="field-error" id="err-rating1"></div>
             </div>
 
+            <div class="col-md-4">
+              <label for="rating2" class="form-label">2. Komunikacijos įvertinimas (1–10) *</label>
+              <input type="number" id="rating2" name="rating2" class="form-control" min="1" max="10">
+              <div class="field-error" id="err-rating2"></div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="rating3" class="form-label">3. Projekto sudėtingumo įvertinimas (1–10) *</label>
+              <input type="number" id="rating3" name="rating3" class="form-control" min="1" max="10">
+              <div class="field-error" id="err-rating3"></div>
+            </div>
+
+            <div class="col-12 d-flex gap-3 mt-3">
+              <span id="submit-wrapper" class="d-inline-block"></span>
+                <button type="submit" id="submit-btn" class="btn" disabled>Siųsti</button>
+              </span>
+                <button type="button" id="clear-btn" class="btn btn-clear">Išvalyti</button>
+            </div>
           </div>
-        </form><!-- End Contact Form -->
+        </form>
+
+        <div id="form-result" class="form-output-box mt-4"></div>
 
       </div>
 
@@ -224,6 +201,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
